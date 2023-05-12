@@ -32,8 +32,8 @@ body:
       label: Database
       description: Does it have a database that is quick to setup?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: checkboxes
