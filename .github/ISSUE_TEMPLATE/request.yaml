@@ -1,0 +1,46 @@
+name: Hosting Request
+description: Request Hosting
+title: "[Request]: "
+labels: ["request"]
+assignees:
+  - jdev082
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill the below information.
+  - type: input
+    id: link
+    attributes:
+      label: Link to service
+      description: Where is the source code?
+      placeholder: https://github.com/user/project
+    validations:
+      required: true
+  - type: textarea
+    id: usage
+    attributes:
+      label: How many resources does it use?
+      description: Is it lightweight? Is it resource intensive?
+      placeholder: 500mb RAM, 2gb storage
+      value: "resources"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Database
+      description: Does it have a database that is quick to setup?
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: I have read the requirements.
+      description: By submitting this issue, you read the requirements.
+      options:
+        - label: I have read the requirements.
+          required: true
